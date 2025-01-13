@@ -17,3 +17,6 @@ Mikä jäi epäselväksi tai tuottanut vaikeuksia?
 Mitä teen seuraavaksi?
 
 Aloitan koodaamaan projektia! Ensiksi toki yksinkertainen käyttöliittymällinen toteutus jossa peliä voi pelata, ja kokeilua markovin ketjuilla.
+
+Aikaa kului:
+1.5h
