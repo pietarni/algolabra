@@ -1,0 +1,1 @@
+Testikattavuus: poetry run pytest
