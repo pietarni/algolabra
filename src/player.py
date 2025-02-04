@@ -13,10 +13,3 @@ def get_player_choice(choices, override_choice = ""):
         return choice
     else:
         return "q"
-
-'''
-choices: lista mahdollisia valintoja, k,p tai s.
-Valitsee satunnaisesti yhden
-'''
-def get_ai_choice(choices):
-    return random.choice(choices)

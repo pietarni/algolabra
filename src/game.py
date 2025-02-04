@@ -1,5 +1,6 @@
 from src.utils import get_score
-from src.player import get_player_choice, get_ai_choice
+from src.player import get_player_choice
+from src.markov import MarkovAI
 
 class GameManager:
     '''
@@ -7,6 +8,7 @@ class GameManager:
     '''
     def __init__(self):
         self.choices = ["k", "s", "p"]
+        self.ai = MarkovAI(self.choices)
 
     '''
     Pelin loop
@@ -18,9 +20,10 @@ class GameManager:
             if (player_choice not in self.choices):
                 print("Poistutaan")
                 break
-            ai_choice = get_ai_choice(self.choices)
-
-            play_round(player_choice, ai_choice)
+            
+            ai_choice = self.ai.get_ai_choice()
+            self.play_round(player_choice, ai_choice)
+            self.ai.update_after_round(player_choice)
 
     def play_round(self, player_choice, ai_choice):
         print(f"AI:n valinta: {ai_choice}")
